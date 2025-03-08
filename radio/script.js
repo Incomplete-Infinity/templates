@@ -2,23 +2,26 @@ class Radio {
   constructor({ label, id, group, position = "right", disabled = false }) {
     this.template = document.getElementById("radio-template").content.cloneNode(true);
     this.radio = this.template.querySelector("input");
+    this.div = this.template.querySelector("div");
     this.labelElement = this.template.querySelector(".radio-label");
 
     // Assign attributes
     this.id = id;
     this.name = group;
     this.disabled = disabled;
+    this.radio.disabled = disabled;
     this.labelElement.textContent = label;
-
+this.container = document.getElementById("radio-container");
     // Adjust label position
     if (position === "left") {
-      this.labelElement.before(this.radio);
+      this.div.before(this.radio);
     } else if (position === "none") {
       this.labelElement.remove();
     }
 
     // Append to container
-    document.getElementById("radio-container").appendChild(this.template);
+    this.container.appendChild(this.template);
+    this.container.appendChild(document.createElement("br"));
   }
 }
 
