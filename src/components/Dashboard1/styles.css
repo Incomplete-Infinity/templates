@@ -1,0 +1,54 @@
+* {
+    background: none !important;
+    background-color: transparent !important;
+    --aug-border-bg: teal;
+    --aug-inlay-bg: teal;
+   }
+   .bg-opacity-0 {
+    backdrop-filter: opacity(0) !important;
+   }
+   .bg-transparent {
+    background: none !important;
+    background-color: transparent !important;
+   }
+   .central-hud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500; /* Make sure it's above everything */
+    pointer-events: none; /* Prevent interaction issues */
+   }
+   
+   .central-hud svg {
+    z-index: 600; /* Ensure HUD elements stay visible */
+   }
+   
+   .outer-container {
+    position: relative; /* Prevent z-index conflicts */
+    z-index: 10;
+   }
+   
+   .col-4 {
+    width: 33.3333% !important;
+    max-width: 33.3333%;
+   }
+   .central-hud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500; /* Ensure it's above the columns */
+    width: 45%; /* Adjust based on overlap preference */
+    height: auto;
+    margin-left: -3%; /* Pull it slightly over left column */
+    margin-right: -3%; /* Pull it slightly over right column */
+    pointer-events: none; /* Prevents accidental clicks */
+   }
+   .col-4 {
+    padding-left: 2%;
+    padding-right: 2%;
+    position: relative; /* Keep stacking context sane */
+    z-index: 10; /* Ensure content stays visible */
+   }
+   

@@ -1,0 +1,73 @@
+body {
+    background: #0a0e1a;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid cyan;
+    background: rgba(0, 10, 20, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.top-section, .bottom-section {
+    padding: 20px;
+    border-bottom: 1px solid cyan;
+}
+
+.quick-info, .operations-info, .details-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-card {
+    background: rgba(0, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.center-section {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%;
+}
+
+.slide {
+    width: 100%;
+    padding: 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background: cyan;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: lime;
+}
